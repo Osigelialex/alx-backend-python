@@ -6,7 +6,8 @@ task Checking
 from typing import List, Tuple, Union
 
 
-def zoom_array(lst: Union[List[int], Tuple[int, ...]], factor: int = 2) -> Union[List[int], Tuple[int, ...]]:
+def zoom_array(lst: Union[List[int], Tuple[int, ...]],
+               factor: int = 2) -> Union[List[int], Tuple[int, ...]]:
     """validates type checking"""
     zoomed_in = [
         item
