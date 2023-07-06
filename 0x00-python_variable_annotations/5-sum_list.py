@@ -9,9 +9,9 @@ function:
 from typing import Union, List
 
 
-def sum_list(input_list: List[Union[int, float]]) -> float:
+def sum_list(input_list: Union[List[int], List[float]]) -> float:
     """Sums up a list of floats"""
-    sum = 0
+    total_sum: float = 0.0
     for i in input_list:
-        sum += i
-    return sum
+        total_sum += i
+    return total_sum
