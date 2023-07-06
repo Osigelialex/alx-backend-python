@@ -1,23 +1,21 @@
 #!/usr/bin/env python3
 """
-task Checking
+type Checking
 """
 
-from typing import List, Tuple, Union
+from typing import Tuple, List
 
 
-def zoom_array(lst: Union[List[int], Tuple[int, ...]],
-               factor: int = 2) -> Union[List[int], Tuple[int, ...]]:
-    """validates type checking"""
-    zoomed_in = [
-        item
-        for item in lst
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """type checking"""
+    zoomed_in: List = [
+        item for item in lst
         for _ in range(factor)
     ]
-    return (zoomed_in)
+    return zoomed_in
 
 
-array = [12, 72, 91]
+array: Tuple[int, ...] = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
