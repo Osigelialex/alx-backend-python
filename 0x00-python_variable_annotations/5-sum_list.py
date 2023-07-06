@@ -3,7 +3,7 @@
 Contains function to sum a list
 
 function:
- * sum_list: sums up a list    
+ * sum_list: sums up a list
 """
 
 from typing import List
