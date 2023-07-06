@@ -6,12 +6,12 @@ function:
  * sum_mixed_list: sums up a list
 """
 
-from typing import List
+from typing import List, Union
 
 
-def sum_mixed_list(mxd_lst: List[int | float]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """Sums up a list of integers and floats"""
-    sum = 0
+    total_sum: float = 0.0
     for i in mxd_lst:
-        sum += i
-    return sum
+        total_sum += i
+    return total_sum
