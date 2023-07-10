@@ -15,8 +15,10 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """spawns wait_random n times with specified delay"""
-    delays = []
+    if n <= 0 or not isinstance(max_delay, int):
+        return []
 
+    delays = []
     for _ in range(n):
         delay = await wait_random(max_delay)
         delays.append(delay)
